@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+
+  </style>
+
+</head>
+
+<body>
+  <div><a href="/rock">Play Rock</a></div>
+  <div><a href="/paper">Play Paper</a></div>
+  <div><a href="/scissors">Play Scissors</a></div>
+
+  <h2>We played <%= @choice%>!</h2>
+  <h2>They played <%= @react%> !</h2>
+
+  <% if @react == 'paper' %>
+    <h2><%= outcome = 'We lost!' %></h2>
+  <% elsif @react == 'scissors' %>
+    <h2><%= outcome = 'We won!' %></h2>
+  <% else %>
+    <h2><%= outcome = 'We tied!' %></h2>
+  <% end %>
+
+  <div>
+  <div><a href="/">Rules</a></div>
+  </div>
+
+</body>
+</html>
